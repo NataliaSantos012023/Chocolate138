@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage extends BasePage {
+ public class HomePage extends CommonPage {
     // o mapeamento cria ou reflete uma DSL
     // Domain Structured Language
     // Linguagem Estruturada de Dominio
@@ -32,6 +32,10 @@ public class HomePage extends BasePage {
     public void Logar(String user, String password){
         txtUsuario.sendKeys(user);
         txtSenha.sendKeys(password);
+    }
+
+    public void clicarNoBotaoLogin(){
         btnLogin.click();
     }
-}
+
+ }

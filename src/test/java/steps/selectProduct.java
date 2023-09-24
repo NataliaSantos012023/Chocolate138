@@ -37,7 +37,7 @@ public class selectProduct {
     @BeforeAll // Execute antes de todos os blocos de passos --> usar do Cucumber
     public static void setUp() {
         ChromeOptions options = new ChromeOptions(); // Instancia o objeto de opções do ChromeDriver
-        options.addArguments("--remote-allow-origins+*"); // Permite qualquer origem remota
+        options.addArguments("--remote-allow-origins=*"); // Permite qualquer origem remota
         WebDriverManager.chromedriver().setup(); // Baixarr a versão mais atual do Chrome
         driver = new ChromeDriver(options); // instancia o objeto do Selenium como ChromeDriver
 

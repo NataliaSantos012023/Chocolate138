@@ -4,27 +4,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class BasePage {
+public class CommonPage{
 
     @FindBy(id = "shopping_cart_container")
-    WebElement imgCarrinho;
+    public WebElement imgCarrinho;
 
     @FindBy(css = "span.title")
     WebElement lblTituloPagina;
 
-    @FindBy(css = "button.btn btn_primary btn_small btn_inventory")
-    WebElement btnAdicionarOuRemoverDoCarrinho;
+    @FindBy(css = "button.btn.btn_primary btn_small.btn_inventory")
+    WebElement btnAdicionarNoCarrinho;
 
     public WebDriver driver;
 
-    public BasePage(WebDriver driver) {
-
+    public CommonPage(WebDriver driver) {
         this.driver = driver;
     }
 
     // Função para retornar o titulo escrito na guia do browser
     public String LerTituloAba(){
-
         return driver.getTitle();
     }
 
@@ -38,11 +36,11 @@ public class BasePage {
 
     // Esta função e apenas um exemplo, ela não vai ser usada no exercício
     public String lerTextoDoBotaoAdicionarOuRemoverDoCarrinho(){
-        return btnAdicionarOuRemoverDoCarrinho.getText();
+        return btnAdicionarNoCarrinho.getText();
     }
 
     public void clicarNoBotaoAdicionarOuRemoverDoCarinho(){
-        btnAdicionarOuRemoverDoCarrinho.click();
+        btnAdicionarNoCarrinho.click();
     }
 
 }
