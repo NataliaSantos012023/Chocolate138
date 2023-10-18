@@ -20,8 +20,8 @@ dependencies {
     implementation("io.cucumber:cucumber-testng:7.13.0")
     implementation("io.github.bonigarcia:webdrivermanager:5.4.0")
     implementation("com.google.code.gson:gson:2.10.1")
-    implementation("org.slf4j:slf4j-api:1.7.33")
     implementation("io.cucumber:cucumber-picocontainer:7.13.0")
+    implementation("org.slf4j:slf4j-api:1.7.33")
 
 
 }
